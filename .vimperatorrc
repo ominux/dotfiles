@@ -1,0 +1,31 @@
+"3.9 (created: 2015/02/15 15:49:05)
+
+source! /Users/reiji/.vimperatorrc.local
+
+" vim: set ft=vimperator:
+set hintchars=lsjdkfgh
+"j, kの動き幅を４倍にする
+nnoremap j 6<C-e>
+nnoremap k 6<C-y>
+
+
+"タブを消した時それの一個上に行くようにする
+map d <M-w>
+
+set editor='[/Applications/Macvim.app/Contents/MacOS/vim]'
+
+command cl javascript Evernote.Overlay.init(null)
+
+"タブを生成する時一個下に生成されるようにする
+map t <M-t>
+
+"タブの移動をH, Lで行う
+noremap H gT
+noremap L gt
+
+"戻る、進むをh, lで行う
+nnoremap h <A-Left>
+nnoremap l <A-Right>
+
+"<C-g>でvisualモードの選択文字を検索
+vmap <silent> <C-g> y<ESC><ESC>P
