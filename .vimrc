@@ -52,6 +52,15 @@ let g:jedi#popup_select_first = 0
 autocmd FileType python setlocal completeopt-=preview
 let g:jedi#popup_on_dot = 0
 "ftpluginに.pyenvのsite-packagesパス追加
+"python << EOF
+"import os
+"import sys
+"
+"home = os.path.expanduser("~")
+"path = home+"/.pyenv/versions/2.7/lib/python2.7/site-packages"
+"if not path in sys.path:
+"	sys.path.insert(0, path)
+"EOF
 
 call dein#add('ujihisa/unite-colorscheme')
 
