@@ -29,3 +29,6 @@ nnoremap l <A-Right>
 
 "<C-g>でvisualモードの選択文字を検索
 vmap <silent> <C-g> y<ESC><ESC>P
+
+"jupyternotebookで作動しないようにする。
+
