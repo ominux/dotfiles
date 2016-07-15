@@ -10,8 +10,8 @@ call dein#add('Shougo/vimproc.vim', {
     \     'windows': 'tools\\update-dll-mingw',
     \     'cygwin': 'make -f make_cygwin.mak',
     \     'mac': 'make -f make_mac.mak',
-    \     'linux': 'make',
-    \     'unix': 'gmake',
+    \     'linux': 'make -f make_unix.mak',
+    \     'unix': 'gmake -f make_unix.mak',
     \    },
     \ })
 
@@ -182,9 +182,10 @@ set autoindent
 autocmd FileType yaml setl noautoindent
 set expandtab
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-autocmd FileType ruby setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,do
+autocmd FileType ruby setl smartindent cinwords=if,elseif,else,for,while,try,except,finally,def,class,do
 autocmd FileType yaml setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,do
 autocmd FileType ruby setl shiftwidth=2
+autocmd FileType verilog setl smartindent cinwords=if,else,module,function,always,begin,case,for,initial
 "setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 "autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
