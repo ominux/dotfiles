@@ -27,6 +27,7 @@ call dein#add('Shougo/neomru.vim')
 
 call dein#add('thinca/vim-quickrun')
 let g:quickrun_config={'*': {'vsplit': '50'}}
+let g:quickrun_config.cpp={'cmdopt': '-std=c++14'}
 let g:quickrun_config._={'runner': 'vimproc', 
 \        "runner/vimproc/updatetime": 10,
 \        "outputter/buffer/close_on_empty": 1,
@@ -144,11 +145,11 @@ call dein#add('ciaranm/inkpot')
 "let g:neocomplete#force_omni_input_patterns.cpp =
 "        \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
 
-call dein#add('slim-template/vim-slim')
-
-call dein#add('kchmck/vim-coffee-script')
-au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
-autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
+"call dein#add('slim-template/vim-slim')
+"
+"call dein#add('kchmck/vim-coffee-script')
+"au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+"autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
 
 call dein#end()
 
