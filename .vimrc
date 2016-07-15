@@ -150,6 +150,9 @@ call dein#add('kchmck/vim-coffee-script')
 au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
 
+call dein#add('Shougo/neosnippet')
+call dein#add('Shougo/neosnippet-snippets')
+
 call dein#end()
 
 
@@ -165,6 +168,7 @@ set clipboard+=unnamed
 set scrolloff=8
 set number
 set ignorecase
+set hlsearch
 set list listchars=tab:¦.,eol:↩︎
 set tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType ruby setl tabstop=2 shiftwidth=2 softtabstop=2
