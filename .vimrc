@@ -158,6 +158,10 @@ imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_or_jump)
 
+call dein#add('vim-scripts/verilog.vim')
+
+call dein#add('vhda/verilog_systemverilog.vim')
+
 call dein#end()
 
 
@@ -185,7 +189,6 @@ autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,exc
 autocmd FileType ruby setl smartindent cinwords=if,elseif,else,for,while,try,except,finally,def,class,do
 autocmd FileType yaml setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,do
 autocmd FileType ruby setl shiftwidth=2
-autocmd FileType verilog setl smartindent cinwords=if,else,module,function,always,begin,case,for,initial
 "setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 "autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
