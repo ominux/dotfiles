@@ -208,6 +208,7 @@ set t_Co=256
 
 inoremap <silent> jj <ESC>
 inoremap <silent> kk <ESC>
+inoremap # X#
 vnoremap v $h
 nnoremap <S-Left> <C-w><<CR>
 nnoremap <S-Right> <C-w>><CR>
