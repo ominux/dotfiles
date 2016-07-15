@@ -155,6 +155,8 @@ call dein#add('Shougo/neosnippet')
 call dein#add('Shougo/neosnippet-snippets')
 let g:neosnippet#snippets_directory = '~/.vim/dein/.dein/neosnippets/'
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_or_jump)
 
 call dein#end()
 
