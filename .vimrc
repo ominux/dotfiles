@@ -153,6 +153,7 @@ call dein#add('ciaranm/inkpot')
 
 call dein#add('Shougo/neosnippet')
 call dein#add('Shougo/neosnippet-snippets')
+let g:neosnippet#snippets_directory = '~/.vim/dein/.dein/neosnippets/'
 
 call dein#end()
 
@@ -183,6 +184,20 @@ autocmd FileType yaml setl smartindent cinwords=if,elif,else,for,while,try,excep
 autocmd FileType ruby setl shiftwidth=2
 "setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 "autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
+
+if has("autocmd")
+  augroup redhat
+    " In text files, always limit the width of text to 78 characters
+    autocmd BufRead *.txt set tw=78
+    " When editing a file, always jump to the last cursor position
+    autocmd BufReadPost *
+    \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+    \   exe "normal! g'\"" |
+    \ endif
+  augroup END
+endif
+
+
 set foldmethod=indent
 set nofoldenable
 set t_Co=256
